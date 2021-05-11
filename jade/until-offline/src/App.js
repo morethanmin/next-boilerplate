@@ -4,14 +4,17 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import LayoutProvider from "./layouts";
 import MainContainer from "./pages/main";
 import UserContainer from "./pages/_user";
 import RepositoryContainer from "./pages/_user/_repository";
 import RepositoriesContainer from "./pages/_user/repositories";
 import SettingsContainer from "./pages/_user/settings";
+import ErrorContainer from "./pages/_error";
+
 function App() {
   return (
-    <div className="App">
+    <LayoutProvider className="App">
       <Router>
         <Switch>
           <Route path="/" component={MainContainer} exact />
@@ -27,9 +30,10 @@ function App() {
             component={RepositoryContainer}
             exact
           />
+          <Route path="*" component={ErrorContainer} />
         </Switch>
       </Router>
-    </div>
+    </LayoutProvider>
   );
 }
 
