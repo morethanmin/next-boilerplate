@@ -1,5 +1,11 @@
 import React from "react";
-
+import styles from "./Footer.module.scss";
 export default function Footer() {
-  return <div>footer</div>;
+  return (
+    <footer>
+      <div className="">
+        <p>&copy; morethanmin</p>
+      </div>
+    </footer>
+  );
 }

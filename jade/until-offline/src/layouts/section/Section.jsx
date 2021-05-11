@@ -1,5 +1,6 @@
 import React from "react";
+import styles from "./Section.module.scss";
 
 export default function Section({ children }) {
-  return <div>{children}</div>;
+  return <section>{children}</section>;
 }

@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function MainContainer() {
-  return <div>IndexContainer</div>;
+  return <div>lorem*100</div>;
 }
